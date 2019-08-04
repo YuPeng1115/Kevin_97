@@ -6,7 +6,8 @@
   
   
   <title>  Blog_Yu Peng </title>
-
+  
+  {% block title %} {{ theme.keywords }} - {{ config.title }}{{ theme.description }} {% endblock %}
  
   
     <link rel="icon" href="/images/favicon.png">
@@ -157,8 +158,6 @@
 		
 			<i class="iconfont icon-tags" style="margin-right:4px"></i>
 			            
-				<a class="link" href="/tags/前端/">前端</a>           
-			            
 				<a class="link" href="/tags/SEO/">SEO</a>           
 			
 		
@@ -210,8 +209,6 @@
 			<i class="iconfont icon-tags" style="margin-right:4px"></i>
 			            
 				<a class="link" href="/tags/Web标准/">Web标准</a>           
-			            
-				<a class="link" href="/tags/浏览器内核/">浏览器内核</a>           
 			
 		
 	</div>

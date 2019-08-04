@@ -6,7 +6,8 @@
   
   
   <title>  前端SEO优化 |   Blog_Yu Peng </title>
-
+  
+  {% block title %} {{ theme.keywords }} - {{ config.title }}{{ theme.description }} {% endblock %}
  
   
     <link rel="icon" href="/images/favicon.png">
@@ -239,7 +240,7 @@
 
       
       <i class="iconfont icon-tag"></i>
-      <a class="tag-link" href="/tags/SEO/">SEO</a> <a class="tag-link" href="/tags/前端/">前端</a>
+      <a class="tag-link" href="/tags/SEO/">SEO</a>
       
     </div>
 
