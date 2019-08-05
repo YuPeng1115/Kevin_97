@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /about/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /tags/
+Disallow: /archives/
+
+Sitemap: https://yupeng1115.github.io/sitemap.xml
