@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Web标准和浏览器内核(理解) |   余鹏的博客 - Web前端工程师与seo优化实战经验分享博客 </title>
+  <title>  Ajax初识 |   余鹏的博客 - Web前端工程师与seo优化实战经验分享博客 </title>
 
   <meta name="Keywords" content="余鹏,博客,前端工程师,seo优化,实战经验分享">
 
@@ -91,17 +91,17 @@
 	
 <div class="header">
 		<p class="title">	
-			Web标准和浏览器内核(理解)
+			ajax初识
 		</p>
 		<div class="info">	
 			<time>
-				3月 15, 2019
+				5月 25, 2019
 			</time>
 
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">1539
+				<span class="words">627
 				</span>
 			
 		</div>
@@ -134,28 +134,72 @@
 		
 
 			
-					<p>Web标准不是某一个标准，而是由W3C和其他标准化组织制定的一系列标准的集合。<br>主要包括结构（Structure）、表现（Presentation）和行为（Behavior）三个方面。</p>
+					<p>AJAX就是浏览器提供的一套API，可以通过代码控制请求与响应，实现网络编程。</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">结构标准：结构用于对网页元素进行整理和分类，咱们主要学的是HTML。</span><br><span class="line">表现标准：表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS。</span><br><span class="line">行为标准：行为是指网页模型的定义及交互的编写，咱们主要学的是 Javascript。</span><br></pre></td></tr></table></figure>
 
-<h3 id="Web标准的好处"><a href="#Web标准的好处" class="headerlink" title="Web标准的好处"></a>Web标准的好处</h3><ol>
-<li>让Web的发展前景更广阔</li>
-<li>内容能被更广泛的设备访问</li>
-<li>更容易被搜寻引擎搜索</li>
-<li>降低网站流量费用</li>
-<li>使网站更易于维护</li>
-<li>提高页面浏览速度</li>
+
+<h3 id="发送Ajax请求步骤"><a href="#发送Ajax请求步骤" class="headerlink" title="发送Ajax请求步骤"></a>发送Ajax请求步骤</h3><ol>
+<li>创建XMLHttpRequest对象</li>
+<li>准备发送</li>
+<li>执行发送动作</li>
+<li>指定回调函数</li>
 </ol>
-<h3 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h3><figure class="highlight x86asm"><table><tr><td class="code"><pre><span class="line">浏览器内核又可以分成两部分：渲染引擎(layout engineer或者Rendering Engine)和<span class="keyword">JS</span>引擎。</span><br><span class="line"></span><br><span class="line">渲染引擎：它负责取得网页的内容(HTML、XML、图像等等)、整理讯息(例如加入CSS等),以及计算网页的显示方式,然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同,所以渲染的效果也不相同。</span><br><span class="line"></span><br><span class="line"><span class="keyword">JS</span>引擎：则是解析Javascript语言，执行 javascript语言来实现网页的动态效果。</span><br><span class="line"></span><br><span class="line">  最开始渲染引擎和<span class="keyword">JS</span>引擎并没有区分的很明确,后来<span class="keyword">JS</span>引擎越来越独立，内核就倾向于只指渲染引擎。有一个网页标准计划小组制作了一个ACID来测试引擎的兼容性和性能。内核的种类很多,如加上没什么人使用的非商业的免费内核,可能会有<span class="number">10</span>多种,但是常见的浏览器内核可以分这四种：Trident、Gecko、Blink、Webkit。</span><br></pre></td></tr></table></figure>
-
-<p>（1） Trident(IE内核)<br>国内很多的双核浏览器的其中一核便是 Trident，美其名曰 “兼容模式”。<br>代表： IE、傲游、世界之窗浏览器、Avant、腾讯TT、猎豹安全浏览器、360极速浏览器、百度浏览器等。<br>Window10 发布后，IE 将其内置浏览器命名为 Edge，Edge 最显著的特点就是新内核 EdgeHTML。</p>
-<p>（2）Gecko(firefox)<br>Gecko(Firefox 内核)： Mozilla FireFox(火狐浏览器) 采用该内核，Gecko 的特点是代码完全公开，因此，其可开发程度很高，全世界的程序员都可以为其编写代码，增加功能。 可惜这几年已经没落了， 比如 打开速度慢、升级频繁、猪一样的队友flash、神一样的对手chrome。</p>
-<p>（3） webkit(Safari)<br>Safari 是苹果公司开发的浏览器，所用浏览器内核的名称是大名鼎鼎的 WebKit。<br>现在很多人错误地把 webkit 叫做 chrome内核（即使 chrome内核已经是 blink 了），苹果感觉像被别人抢了媳妇，都哭晕再厕所里面了。<br>代表浏览器：傲游浏览器3、 Apple Safari (Win/Mac/iPhone/iPad)、Symbian手机浏览器、Android 默认浏览器。</p>
-<p>（4） Chromium/Blink(chrome)<br>在 Chromium 项目中研发 Blink 渲染引擎（即浏览器核心），内置于 Chrome 浏览器之中。Blink 其实是 WebKit 的分支。<br>大部分国产浏览器最新版都采用Blink内核。二次开发</p>
-<p>（5） Presto(Opera)<br>Presto（已经废弃） 是挪威产浏览器 opera 的 “前任” 内核，为何说是 “前任”，因为最新的 opera 浏览器早已将之抛弃从而投入到了谷歌怀抱了。</p>
-<p><strong>了解一点：</strong></p>
-<p>移动端的浏览器内核主要说的是系统内置浏览器的内核。<br>Android手机而言，使用率最高的就是Webkit内核，大部分国产浏览器宣称的自己的内核，基本上也是属于webkit二次开发。<br>iOS以及WP7平台上，由于系统原因，系统大部分自带浏览器内核，一般是Safari或者IE内核Trident的</p>
+<p><img src="images%5Cajax.png" alt="ajax—回调函数"></p>
+<p><strong>get：</strong></p>
+<ul>
+<li>get请求参数在url中传递</li>
+<li>需要注意编码问题</li>
+</ul>
+<p><strong>post：</strong></p>
+<ul>
+<li>post请求参数在请求体中传递</li>
+<li>需要设置请求头信息</li>
+</ul>
+<h3 id="同步与异步"><a href="#同步与异步" class="headerlink" title="同步与异步"></a>同步与异步</h3><p>页面加载的同步与异步（白屏与不刷新）</p>
+<ol>
+<li>普通的页面效果：w3school.org</li>
+<li>页面不刷新效果：评论加载</li>
+</ol>
+<p>描述两者之间的行为方式</p>
+<ol>
+<li><strong>同步</strong> 彼此等待 — 阻塞</li>
+<li><strong>异步</strong>  各做各的 —  非阻塞</li>
+</ol>
+<h3 id="ajax的封装"><a href="#ajax的封装" class="headerlink" title="ajax的封装"></a>ajax的封装</h3><p>默认参数</p>
+<p>出来形参，传递参数的时候覆盖默认参数，不传递就使用默认参数</p>
+<ol>
+<li><p>创建XMLHttpRequest对象</p>
+<p>把对象形式的参数转化为字符串形式的参数</p>
+<p>处理get请求参数并且处理中文乱码问题</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>准备发送（设置发送的参数）</p>
+<p>处理post请求参数并且设置请求头信息（必须设置）</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>执行发送动作</p>
+<p>处理同步请求，不会调用回调函数  </p>
+</li>
+</ol>
+<ol start="4">
+<li>指定回调函数（处理服务器响应数据）</li>
+</ol>
+<h3 id="Ajax跨域"><a href="#Ajax跨域" class="headerlink" title="Ajax跨域"></a>Ajax跨域</h3><p><strong>同源策略</strong></p>
+<ol>
+<li><p>同源策略是浏览器的一种安全策略，所谓同源指的是请求URL地址中的协议、域名和端口都相同，只要其中之一不相同就是跨域</p>
+</li>
+<li><p>同源策略主要为了保证浏览器的安全性</p>
+</li>
+<li><p>在同源策略下，浏览器不允许Ajax跨域获取服务器数据</p>
+</li>
+</ol>
+<h3 id="JSONP原理"><a href="#JSONP原理" class="headerlink" title="JSONP原理"></a>JSONP原理</h3><ol>
+<li>静态script标签的src属性进行跨域请求</li>
+<li>动态创建script标签，通过标签的src属性发送请求</li>
+</ol>
   	
 					
 	  </div>     
@@ -168,7 +212,7 @@
 
       
       <i class="iconfont icon-tag"></i>
-      <a class="tag-link" href="/tags/Web标准/">Web标准</a>
+      <a class="tag-link" href="/tags/ajax/">ajax</a>
       
     </div>
 
@@ -204,16 +248,16 @@
   <nav class="nav">
     <div class="link">
       
-    </div>
-    <div class="link">
-      
-      <a href="/2019/04/28/前端SEO优化/" class="link-wrap">
-        <strong class="caption">newer</strong>
+      <a href="/2019/05/03/网络概念/" class="link-wrap">
+        <strong class="caption">older</strong>
         
         <span class="title">
-          前端SEO优化
+          网络概念
         </span>
       </a>
+      
+    </div>
+    <div class="link">
       
     </div>
   </nav>
