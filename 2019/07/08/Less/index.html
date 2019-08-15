@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Ajax初识 |   余鹏的博客-前端-seo优化与实战经验分享博客 </title>
+  <title>  Less |   余鹏的博客-前端-seo优化与实战经验分享博客 </title>
 
   <meta name="Keywords" content="余鹏,博客,前端,实战经验分享">
 
@@ -91,17 +91,17 @@
 	
 <div class="header">
 		<p class="title">	
-			ajax初识
+			Less
 		</p>
 		<div class="info">	
 			<time>
-				5月 25, 2019
+				7月 08, 2019
 			</time>
 
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">627
+				<span class="words">656
 				</span>
 			
 		</div>
@@ -134,71 +134,73 @@
 		
 
 			
-					<p>AJAX就是浏览器提供的一套API，可以通过代码控制请求与响应，实现网络编程。</p>
+					<p>Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。</p>
 <a id="more"></a>
 
 
 
-<h3 id="发送Ajax请求步骤"><a href="#发送Ajax请求步骤" class="headerlink" title="发送Ajax请求步骤"></a>发送Ajax请求步骤</h3><ol>
-<li>创建XMLHttpRequest对象</li>
-<li>准备发送</li>
-<li>执行发送动作</li>
-<li>指定回调函数</li>
-</ol>
-<p><img src="/resource/ajax.png" alt="ajax—回调函数"></p>
-<p><strong>get：</strong></p>
-<ul>
-<li>get请求参数在url中传递</li>
-<li>需要注意编码问题</li>
-</ul>
-<p><strong>post：</strong></p>
-<ul>
-<li>post请求参数在请求体中传递</li>
-<li>需要设置请求头信息</li>
-</ul>
-<h3 id="同步与异步"><a href="#同步与异步" class="headerlink" title="同步与异步"></a>同步与异步</h3><p>页面加载的同步与异步（白屏与不刷新）</p>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p>​    less是一种动态样式语言，属于css预处理器的范畴，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展LESS 既可以在 客户端 上运行，也可以借助Node.js在服务端运行。</p>
+<pre><code>less的中文官网：http://lesscss.cn/
+bootstrap中less教程：http://www.bootcss.com/p/lesscss/</code></pre><p><strong>Less编译工具</strong></p>
+<p><a href="www.koala-app.com">koala官网</a></p>
+<p><strong>less中的注释</strong></p>
 <ol>
-<li>普通的页面效果：w3school.org</li>
-<li>页面不刷新效果：评论加载</li>
-</ol>
-<p>描述两者之间的行为方式</p>
-<ol>
-<li><strong>同步</strong> 彼此等待 — 阻塞</li>
-<li><strong>异步</strong>  各做各的 —  非阻塞</li>
-</ol>
-<h3 id="ajax的封装"><a href="#ajax的封装" class="headerlink" title="ajax的封装"></a>ajax的封装</h3><p>默认参数</p>
-<p>出来形参，传递参数的时候覆盖默认参数，不传递就使用默认参数</p>
-<ol>
-<li><p>创建XMLHttpRequest对象</p>
-<p>把对象形式的参数转化为字符串形式的参数</p>
-<p>处理get请求参数并且处理中文乱码问题</p>
-</li>
+<li>以//开头的注释，不会被编译到css文件中</li>
 </ol>
 <ol start="2">
-<li><p>准备发送（设置发送的参数）</p>
-<p>处理post请求参数并且设置请求头信息（必须设置）</p>
+<li><p>以/**/包裹的注释会被编译到css文件中 </p>
+<p>​    </p>
 </li>
 </ol>
-<ol start="3">
-<li><p>执行发送动作</p>
-<p>处理同步请求，不会调用回调函数  </p>
-</li>
-</ol>
-<ol start="4">
-<li>指定回调函数（处理服务器响应数据）</li>
-</ol>
-<h3 id="Ajax跨域"><a href="#Ajax跨域" class="headerlink" title="Ajax跨域"></a>Ajax跨域</h3><p><strong>同源策略</strong></p>
+<p><strong>less中的变量</strong></p>
+<p>使用@来申明一个变量：@pink：pink;</p>
 <ol>
-<li><p>同源策略是浏览器的一种安全策略，所谓同源指的是请求URL地址中的协议、域名和端口都相同，只要其中之一不相同就是跨域</p>
+<li><p>作为普通属性值只来使用：直接使用@pink</p>
 </li>
-<li><p>同源策略主要为了保证浏览器的安全性</p>
+<li><p>作为选择器和属性名：#@{selector的值}的形式</p>
 </li>
-<li><p>在同源策略下，浏览器不允许Ajax跨域获取服务器数据</p>
+<li><p>作为URL：@{url}</p>
+</li>
+<li><p>变量的延迟加载</p>
 </li>
 </ol>
-<h3 id="JSONP原理"><a href="#JSONP原理" class="headerlink" title="JSONP原理"></a>JSONP原理</h3><ol>
-<li>静态script标签的src属性进行跨域请求</li>
-<li>动态创建script标签，通过标签的src属性发送请求</li>
+<p><strong>less中的嵌套规则</strong></p>
+<ol>
+<li><p>基本嵌套规则</p>
+</li>
+<li><p>&amp;的使用</p>
+</li>
+</ol>
+<p><strong>less中的混合</strong></p>
+<p>混合就是将一系列属性从一个规则集引入到另一个规则集的方式</p>
+<ol>
+<li><p>普通混合（编译到原生CSS中的）  </p>
+</li>
+<li><p>不带输出的混合</p>
+</li>
+<li><p>带参数的混合</p>
+</li>
+<li><p>带参数并且有默认值的混合</p>
+</li>
+<li><p>带多个参数的混合</p>
+</li>
+<li><p>命名参数</p>
+</li>
+<li><p>匹配模式</p>
+</li>
+<li><p>arguments变量</p>
+</li>
+</ol>
+<p><strong>less运算</strong></p>
+<p>在less中可以进行加减乘除的运算</p>
+<p>计算的一方带单位</p>
+<p><strong>less避免编译</strong></p>
+<p><strong>less继承</strong></p>
+<ol>
+<li><p>性能比混合高</p>
+</li>
+<li><p>灵活度比混合低</p>
+</li>
 </ol>
   	
 					
@@ -212,7 +214,7 @@
 
       
       <i class="iconfont icon-tag"></i>
-      <a class="tag-link" href="/tags/ajax/">ajax</a>
+      <a class="tag-link" href="/tags/less/">less</a>
       
     </div>
 
@@ -248,22 +250,22 @@
   <nav class="nav">
     <div class="link">
       
-      <a href="/2019/05/03/网络概念/" class="link-wrap">
+      <a href="/2019/06/28/JS模块化规范/" class="link-wrap">
         <strong class="caption">older</strong>
         
         <span class="title">
-          网络概念
+          JS模块化规范
         </span>
       </a>
       
     </div>
     <div class="link">
       
-      <a href="/2019/06/10/ECMAScript/" class="link-wrap">
+      <a href="/2019/07/23/webpack/" class="link-wrap">
         <strong class="caption">newer</strong>
         
         <span class="title">
-          ECMAScript
+          自动化构建工具
         </span>
       </a>
       

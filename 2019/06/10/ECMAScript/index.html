@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  
+  <title>  ECMAScript |   余鹏的博客-前端-seo优化与实战经验分享博客 </title>
+
+  <meta name="Keywords" content="余鹏,博客,前端,实战经验分享">
+
+  <meta name="Description" content="Hello! I'm Yu Peng.建立这个博客来记录自己的前端技术学习成果、以及网站的SEO优化的认识、对技术的积累和知识的巩固、追求且学习新的知识，与大家分享交流。">
+
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+
+  <link rel="stylesheet" href="/nayo.min.css"> 
+</head>  
+  <body>   
+    
+      <header class="header-wrapper">
+
+  <nav class="inner">
+    <div class="title">
+      <a href="/">
+        <img class="logo" src="/images/logo.png">
+      </a>
+    </div>
+
+    <ul class="menu">
+      
+      
+      <li class="item">
+        <a class="link" id="menu-home" href="/">
+          <i class="iconfont icon-home">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-archives" href="/archives">
+          <i class="iconfont icon-archives">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-tags" href="/tags">
+          <i class="iconfont icon-tags">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-about" href="/about">
+          <i class="iconfont icon-about">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-search">
+          <i class="iconfont icon-search">
+        </i></a>
+        
+
+        
+      
+    </li></ul>
+  </nav>
+</header>
+
+<header class="mobile-header-wrapper">
+  <i id="mobile-toggle" class="iconfont icon-menu mobile-toggle"></i>
+</header>   
+
+      <div class="container">       
+          
+          
+            <div class="container-inner">  
+          
+
+          <article class="post slideDownMin">
+  
+	
+<div class="header">
+		<p class="title">	
+			ECMAScript
+		</p>
+		<div class="info">	
+			<time>
+				6月 10, 2019
+			</time>
+
+			
+			
+				<i class="iconfont icon-words"></i>
+				<span class="words">3373
+				</span>
+			
+		</div>
+</div> 
+	
+
+    <script type="text/x-mathjax-config">
+        var post = document.getElementsByClassName("post")[0];  
+        MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",    
+            tex2jax: {
+                inlineMath:  [ ["$", "$"] , ["\\(","\\)"]],
+                displayMath: [ ["$$","$$"] , ["\\[","\\]"]],
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+            },
+            "HTML-CSS": {            
+                showMathMenu: false
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub,post]);
+    </script>
+    <style>.MathJax{outline:0;}</style>
+
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.2/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+ 
+
+	  <div class="typo post-content ">
+
+		
+
+			
+					<p><a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">ECMAScript</a>(俗称: ES5, ES6)规范、尤其ES6是JavaScript 语言的下一代标准，它的目标，是使得JavaScript语言可以用来编写复杂的大型应用程序，成为企业级开发语言。</p>
+<a id="more"></a>
+
+
+
+<h3 id="理解ES"><a href="#理解ES" class="headerlink" title="理解ES"></a><strong>理解ES</strong></h3><ol>
+<li>全称: ECMAScript</li>
+<li>js语言的规范</li>
+<li>我们用的js是它的实现</li>
+<li>js的组成<ul>
+<li>ECMAScript(js基础)</li>
+<li>扩展–&gt;浏览器端<ul>
+<li>BOM</li>
+<li>DOM</li>
+</ul>
+</li>
+<li>扩展–&gt;服务器端<ul>
+<li>Node.js</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>​      </p>
+<h3 id="ES5"><a href="#ES5" class="headerlink" title="ES5"></a>ES5</h3><ol>
+<li><p><strong>严格模式</strong></p>
+<ul>
+<li><p>运行模式: 正常(混杂)模式与严格模式</p>
+</li>
+<li><p>应用上严格式: ‘strict mode’;</p>
+</li>
+<li><p>作用: </p>
+<ul>
+<li><p>使得Javascript在更严格的条件下运行</p>
+</li>
+<li><p>消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为</p>
+</li>
+<li><p>消除代码运行的一些不安全之处，保证代码运行的安全</p>
+</li>
+<li><p>需要记住的几个变化</p>
+<ul>
+<li><p>声明定义变量必须用var</p>
+</li>
+<li><p>禁止自定义的函数中的this关键字指向全局对象</p>
+</li>
+<li><p>创建eval作用域, 更安全</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p><strong>JSON对象</strong></p>
+<ul>
+<li><p>作用: 用于在json对象/数组与js对象/数组相互转换</p>
+</li>
+<li><p>JSON.stringify(obj/arr)<br> js对象(数组)转换为json对象(数组)</p>
+</li>
+<li><p>JSON.parse(json)<br> json对象(数组)转换为js对象(数组)</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><p><strong>Object扩展</strong></p>
+<ul>
+<li><p>Object.create(prototype[, descriptors]) : 创建一个新的对象</p>
+<ul>
+<li>以指定对象为原型创建新的对象</li>
+<li>指定新的属性, 并对属性进行描述<ul>
+<li>value : 指定值</li>
+<li>writable : 标识当前属性值是否是可修改的, 默认为true</li>
+<li><strong>get方法</strong> : 用来得到当前属性值的回调函数</li>
+<li><strong>set方法</strong> : 用来监视当前属性值变化的回调函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Object.defineProperties(object, descriptors) : 为指定对象定义扩展多个属性</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="4">
+<li><p><strong>Array扩展</strong></p>
+<ul>
+<li><p>Array.prototype.indexOf(value) : 得到值在数组中的第一个下标</p>
+</li>
+<li><p>Array.prototype.lastIndexOf(value) : 得到值在数组中的最后一个下标</p>
+</li>
+<li><p><strong>Array.prototype.forEach(function(item, index){}) : 遍历数组</strong></p>
+</li>
+<li><p><strong>Array.prototype.map(function(item, index){}) : 遍历数组返回一个新的数组</strong></p>
+</li>
+<li><p><strong>Array.prototype.filter(function(item, index){}) : 遍历过滤出一个子数组</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="5">
+<li><p><strong>Function扩展</strong></p>
+<ul>
+<li><p>Function.prototype.bind(obj)</p>
+<ul>
+<li>将函数内的this绑定为obj, 并将函数返回</li>
+</ul>
+</li>
+<li><p>面试题: 区别bind()与call()和apply()?</p>
+<ul>
+<li><p>fn.bind(obj) : 指定函数中的this, 并返回函数</p>
+</li>
+<li><p>fn.call(obj) : 指定函数中的this,并调用函数</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="6">
+<li><strong>Date扩展</strong><ul>
+<li>Date.now() : 得到当前时间值</li>
+</ul>
+</li>
+</ol>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><ol>
+<li><p><strong>2个新的关键字</strong></p>
+<ul>
+<li><p>let/const</p>
+</li>
+<li><p>块作用域</p>
+</li>
+<li><p>没有变量提升</p>
+</li>
+<li><p>不能重复定义</p>
+</li>
+<li><p>值不可变</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="2">
+<li><p><strong>变量的解构赋值</strong></p>
+<ul>
+<li><p>将包含多个数据的对象(数组)一次赋值给多个变量</p>
+</li>
+<li><p>数据源: 对象/数组</p>
+</li>
+<li><p>目标: {a, b}/[a, b]</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><p><strong>各种数据类型的扩展</strong></p>
+<ul>
+<li><p>字符串</p>
+<ul>
+<li><strong>模板字符串</strong> <ul>
+<li>作用: 简化字符串的拼接</li>
+<li>模板字符串必须用``</li>
+<li>变化的部分使用${xxx}定义</li>
+</ul>
+</li>
+<li>contains(str) : 判断是否包含指定的字符串</li>
+<li>startsWith(str) : 判断是否以指定字符串开头</li>
+<li>endsWith(str) : 判断是否以指定字符串结尾</li>
+<li>repeat(count) : 重复指定次数</li>
+</ul>
+</li>
+<li><p>对象</p>
+<ul>
+<li><p><strong>简化的对象写法</strong></p>
+<figure class="highlight xquery"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span><span class="built_in"> name</span> = <span class="string">'Tom'</span>;</span><br><span class="line"><span class="keyword">let</span> age = <span class="number">12</span>;</span><br><span class="line"><span class="keyword">let</span> person = &#123;</span><br><span class="line">   <span class="built_in"> name</span>,</span><br><span class="line">    age,</span><br><span class="line">    setName <span class="built_in">(name</span>) &#123;</span><br><span class="line">        this<span class="built_in">.name</span> =<span class="built_in"> name</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Object.assign(target, source1, source2..) : 将源对象的属性复制到目标对象上</p>
+</li>
+<li><p>Object.is(v1, v2) : 判断2个数据是否完全相等</p>
+</li>
+<li><p><strong>proto</strong>属性 : 隐式原型属性</p>
+</li>
+</ul>
+</li>
+<li><p>数组</p>
+<ul>
+<li>Array.from(v) : 将伪数组对象或可遍历对象转换为真数组</li>
+<li>Array.of(v1, v2, v3) : 将一系列值转换成数组</li>
+<li>find(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素</li>
+<li>findIndex(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素下标</li>
+</ul>
+</li>
+<li><p>函数</p>
+<ul>
+<li><p><strong>箭头函数</strong></p>
+<ul>
+<li>用来定义匿名函数</li>
+<li>基本语法:<ul>
+<li>没有参数: () =&gt; console.log(‘xxxx’)</li>
+<li>一个参数: i =&gt; i+2</li>
+<li>大于一个参数: (i,j) =&gt; i+j</li>
+<li>函数体不用大括号: 默认返回结果</li>
+<li>函数体如果有多个语句, 需要用{}包围</li>
+</ul>
+</li>
+<li>使用场景: 多用来定义回调函数</li>
+</ul>
+</li>
+<li><p><strong>形参的默认值</strong></p>
+<ul>
+<li>定义形参时指定其默认的值</li>
+</ul>
+</li>
+<li><p><strong>rest(可变)参数</strong></p>
+<ul>
+<li>通过形参左侧的…来表达, 取代arguments的使用</li>
+</ul>
+</li>
+<li><p><strong>扩展运算符(…)</strong></p>
+<ul>
+<li>可以分解出数组或对象中的数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="4">
+<li><p><strong>set/Map容器结构</strong></p>
+<ul>
+<li><p>容器: 能保存多个数据的对象, 同时必须具备操作内部数据的方法</p>
+</li>
+<li><p>任意对象都可以作为容器使用, 但有的对象不太适合作为容器使用(如函数)</p>
+</li>
+<li><p><strong>Set的特点</strong>: 保存多个value, value是不重复 ====&gt;数组元素去重</p>
+</li>
+<li><p><strong>Map的特点</strong>: 保存多个key–value, key是不重复, value是可以重复的</p>
+</li>
+<li><p>API</p>
+<ul>
+<li><p>Set()/Set(arr)  //arr是一维数组</p>
+</li>
+<li><p>add(value)</p>
+</li>
+<li><p>delete(value)</p>
+</li>
+<li><p>clear();</p>
+</li>
+<li><p>has(value)</p>
+</li>
+<li><p>size</p>
+</li>
+<li></li>
+<li><p>Map()/Map(arr)  //arr是二维数组</p>
+</li>
+<li><p>set(key, value)</p>
+</li>
+<li><p>delete(key)</p>
+</li>
+<li><p>clear()</p>
+</li>
+<li><p>has(key)</p>
+</li>
+<li><p>size</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="5">
+<li><p><strong>for–of循环</strong></p>
+<ul>
+<li><p>可以遍历任何容器</p>
+</li>
+<li><p>数组</p>
+</li>
+<li><p>对象</p>
+</li>
+<li><p>伪/类对象</p>
+</li>
+<li><p>字符串</p>
+</li>
+<li><p>可迭代的对象</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="6">
+<li><p><strong>Promise</strong></p>
+<ul>
+<li><p>解决<code>回调地狱</code>(回调函数的层层嵌套, 编码是不断向右扩展, 阅读性很差)</p>
+</li>
+<li><p>能以同步编码的方式实现异步调用</p>
+</li>
+<li><p>在es6之前原生的js中是没这种实现的, 一些第三方框架(jQuery)实现了promise</p>
+</li>
+<li><p>ES6中定义实现API: </p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1. 创建promise对象</span></span><br><span class="line"><span class="keyword">var</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>)</span>&#123; </span><br><span class="line">  <span class="comment">// 做异步的操作 </span></span><br><span class="line">  <span class="keyword">if</span>(成功) &#123; <span class="comment">// 调用成功的回调</span></span><br><span class="line">    resolve(result); </span><br><span class="line">  &#125; <span class="keyword">else</span> &#123; <span class="comment">// 调用失败的回调</span></span><br><span class="line">    reject(errorMsg); </span><br><span class="line">  &#125; </span><br><span class="line">&#125;) </span><br><span class="line"><span class="comment">// 2. 调用promise对象的then()</span></span><br><span class="line">promise.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  result =&gt; <span class="built_in">console</span>.log(result), </span></span></span><br><span class="line"><span class="function"><span class="params">  errorMsg =&gt; alert(errorMsg)</span></span></span><br><span class="line"><span class="function"><span class="params"></span>))</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>class类</strong></p>
+<ul>
+<li>用 class 定义一类</li>
+<li>用 constructor() 定义构造方法(相当于构造函数)</li>
+<li>一般方法: xxx () {}</li>
+<li>用extends来定义子类</li>
+<li>用super()来父类的构造方法</li>
+<li>子类方法自定义: 将从父类中继承来的方法重新实现一遍</li>
+<li>js中没有方法重载(方法名相同, 但参数不同)的语法</li>
+</ul>
+</li>
+</ol>
+<h3 id="ES7"><a href="#ES7" class="headerlink" title="ES7"></a>ES7</h3><ul>
+<li><p>指数运算符: **</p>
+</li>
+<li><p>Array.prototype.includes(value) : 判断数组中是否包含指定value</p>
+</li>
+<li><p><strong>区别方法的2种称谓</strong></p>
+<ul>
+<li>静态(工具)方法<ul>
+<li>Fun.xxx = function(){}</li>
+</ul>
+</li>
+<li>实例方法<ul>
+<li>所有实例对象 : Fun.prototype.xxx = function(){} //xxx针对Fun的所有实例对象</li>
+<li>某个实例对象 : fun.xxx = function(){} //xxx只是针对fun对象</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  	
+					
+	  </div>     
+	  
+
+	<div class="bottom">
+  <div class="other">
+    <div class="meta">
+      
+
+      
+      <i class="iconfont icon-tag"></i>
+      <a class="tag-link" href="/tags/ES5-6-7/">ES5_6_7</a>
+      
+    </div>
+
+    <div class="operate">
+      
+      <span class="text">Share</span>
+      <ul class="share">
+	   			             
+        <li class="iconfont 
+		icon-share-qq 
+		-mob-share-qq 
+		item"></li>		
+   	   			             
+        <li class="iconfont 
+		icon-share-weixin 
+		-mob-share-weixin 
+		item"></li>		
+   	   			             
+        <li class="iconfont 
+		icon-share-weibo 
+		-mob-share-weibo 
+		item"></li>		
+   	   
+</ul>	
+
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+      
+    </div>
+  </div>
+
+
+  
+  <nav class="nav">
+    <div class="link">
+      
+      <a href="/2019/05/25/ajax初识/" class="link-wrap">
+        <strong class="caption">older</strong>
+        
+        <span class="title">
+          ajax初识
+        </span>
+      </a>
+      
+    </div>
+    <div class="link">
+      
+      <a href="/2019/06/28/JS模块化规范/" class="link-wrap">
+        <strong class="caption">newer</strong>
+        
+        <span class="title">
+          JS模块化规范
+        </span>
+      </a>
+      
+    </div>
+  </nav>
+  
+</div> 
+	
+<div class="comment">
+
+    
+
+    <div id="comment">
+    </div>
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+
+    <script src="//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js"></script>
+
+    <script>
+        new Valine({
+            el: '#comment',
+            notify: false,
+            verify: false,
+            app_id: 'cFM0eCo0CQ9xmBXmHi1eltol-gzGzoHsz',
+            app_key: 'oh9tizsnvV2vNvWgqEvoNtQO',
+            path: window.location.pathname,
+            avatar: 'mm',
+            guest_info: ['nick', 'mail']
+        });
+    </script>
+    
+</div>	
+</article>
+
+          </div> 
+      </div>            
+    
+        <i id="toTop" class="iconfont icon-backtotop"></i>
+
+  
+    <div class="none" id="search">
+    <div class="header">
+        <input type="text" placeholder="输入你想搜索的" id="search-input" class="input">
+        
+        <i id="search-cancel" class="iconfont icon-cancel"></i>
+    </div>
+
+    <div id="search-result" class="result"></div>
+</div>
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon" src="/images/logo.png">  
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+      
+</div>
+        
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2d14233d5150db72b8cddabf0dab7d73"; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){
+	i['GoogleAnalyticsObject']=r;
+	i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-144218558-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+     
+    
+
+
+<footer class="footer">
+	<div class="inner">
+		<div class="copyright">
+			&copy;
+			
+			2019
+			Kevin
+		</div>
+	</div>
+</footer>   
+
+    <script src="/nayo.bundle.js"></script>           
+  </body>        
+</html>
