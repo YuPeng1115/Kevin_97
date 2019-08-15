@@ -227,8 +227,8 @@
 <p>webpack –watch  //编译并启动监视(但需要刷新浏览器)</p>
 </li>
 <li><p>浏览器自动刷新(热加载)—-解决手动刷新浏览器问题</p>
-<p>npm install webpack-dev-server@1 -g<br>webpack-dev-server<br> 访问: <a href="http://localhost:8080/webpack-dev-server/" target="_blank" rel="noopener">http://localhost:8080/webpack-dev-server/</a></p>
-<pre><code>; http://localhost:8080</code></pre><p> !!!发现问题—-访问的是文件夹路径而不是页面<br>   devServer:{</p>
+<p>npm install webpack-dev-server@1 -g<br>webpack-dev-server<br> 访问: <a href="http://localhost:8080/webpack-dev-server/" target="_blank" rel="noopener">http://localhost:8080/webpack-dev-server/</a>; <a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
+<p> !!!发现问题—-访问的是文件夹路径而不是页面<br>   devServer:{</p>
 <pre><code>    contentBase: &apos;./build&apos;,//内置服务器动态加载页面所在的目录
     historyApiFallback:true,//不跳转
     inline:true
