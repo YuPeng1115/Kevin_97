@@ -101,7 +101,7 @@
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">2048
+				<span class="words">2061
 				</span>
 			
 		</div>
@@ -140,27 +140,37 @@
 
 
 <h3 id="JS模块化"><a href="#JS模块化" class="headerlink" title="JS模块化"></a>JS模块化</h3><ul>
-<li><p>模块化的理解</p>
-</li>
+<li>模块化的理解</li>
+</ul>
+<ul>
 <li><p>什么是模块?</p>
 <ul>
-<li>将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起</li>
-<li>块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信</li>
+<li><p>将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起</p>
+</li>
+<li><p>块的内部数据/实现是私有的, 只是向外部暴露一些接口(方法)与外部其它模块通信</p>
+</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p>一个模块的组成</p>
 <ul>
-<li>数据—&gt;内部的属性</li>
-<li>操作数据的行为—&gt;内部的函数</li>
+<li><p>数据—&gt;内部的属性</p>
+</li>
+<li><p>操作数据的行为—&gt;内部的函数</p>
+</li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p>模块化</p>
 <ul>
 <li>编码时是按照模块一个一个编码的, 整个项目就是一个模块化的项目</li>
 </ul>
 </li>
-<li><p>模块化的进化过程</p>
+</ul>
 <ul>
+<li>模块化的进化过程<ul>
 <li>全局function模式 : <ul>
 <li>编码: 全局变量/函数</li>
 <li>问题: 污染全局命名空间, 容易引起命名冲突/数据不安全</li>
@@ -280,7 +290,10 @@
     * 其它模块
       <figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;xxx, yyy&#125; <span class="keyword">from</span> <span class="string">'模块路径/模块名'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> module1 <span class="keyword">from</span> <span class="string">'模块路径/模块名'</span></span><br></pre></td></tr></table></figure>
 
+
+
 * 问题: 所有浏览器还不能直接识别ES6模块化的语法  
+
 * 解决:
     * 使用Babel将ES6---&gt;ES5(使用了CommonJS) ----浏览器还不能直接支行
     * 使用Browserify---&gt;打包处理----浏览器可以运行</code></pre>  	
@@ -341,6 +354,14 @@
       
     </div>
     <div class="link">
+      
+      <a href="/2019/07/08/Less/" class="link-wrap">
+        <strong class="caption">newer</strong>
+        
+        <span class="title">
+          Less
+        </span>
+      </a>
       
     </div>
   </nav>
