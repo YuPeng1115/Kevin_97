@@ -101,7 +101,7 @@
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">2061
+				<span class="words">2068
 				</span>
 			
 		</div>
@@ -139,10 +139,7 @@
 
 
 
-<h3 id="JS模块化"><a href="#JS模块化" class="headerlink" title="JS模块化"></a>JS模块化</h3><ul>
-<li>模块化的理解</li>
-</ul>
-<ul>
+<h3 id="模块化的理解"><a href="#模块化的理解" class="headerlink" title="模块化的理解"></a>模块化的理解</h3><ol>
 <li><p>什么是模块?</p>
 <ul>
 <li><p>将一个复杂的程序依据一定的规则(规范)封装成几个块(文件), 并进行组合在一起</p>
@@ -151,8 +148,8 @@
 </li>
 </ul>
 </li>
-</ul>
-<ul>
+</ol>
+<ol start="2">
 <li><p>一个模块的组成</p>
 <ul>
 <li><p>数据—&gt;内部的属性</p>
@@ -161,15 +158,15 @@
 </li>
 </ul>
 </li>
-</ul>
-<ul>
+</ol>
+<ol start="3">
 <li><p>模块化</p>
 <ul>
 <li>编码时是按照模块一个一个编码的, 整个项目就是一个模块化的项目</li>
 </ul>
 </li>
-</ul>
-<ul>
+</ol>
+<ol start="4">
 <li>模块化的进化过程<ul>
 <li>全局function模式 : <ul>
 <li>编码: 全局变量/函数</li>
@@ -194,11 +191,8 @@
 </li>
 </ul>
 </li>
-</ul>
-<ul>
-<li><strong>模块化规范</strong></li>
-</ul>
-<ul>
+</ol>
+<h3 id="模块化规范"><a href="#模块化规范" class="headerlink" title="模块化规范"></a>模块化规范</h3><ol>
 <li><p><strong>CommonJS</strong></p>
 <ul>
 <li><p>Node.js : 服务器端</p>
@@ -212,7 +206,7 @@
 </li>
 </ul>
 <p>引入模块 : require</p>
-  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = <span class="built_in">require</span>(<span class="string">'模块名/模块相对路径'</span>)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = <span class="built_in">require</span>(<span class="string">'模块名/模块相对路径'</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>引入模块发生在什么时候?</p>
 <ul>
@@ -224,8 +218,9 @@
 </li>
 </ul>
 </li>
-</ul>
-<ul>
+</ol>
+<p>​           </p>
+<ol start="2">
 <li><p><strong>AMD : 浏览器端</strong></p>
 <ul>
 <li>require.js</li>
@@ -234,38 +229,35 @@
 <li>引入模块: require([‘模块1’, ‘模块2’, ‘模块3’], function(m1, m2){//使用模块对象})</li>
 <li>配置: <figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">require.config(&#123;</span><br><span class="line">  <span class="comment">//基本路径</span></span><br><span class="line">  <span class="string">baseUrl :</span> <span class="string">'js/'</span>,</span><br><span class="line">  <span class="comment">//标识名称与路径的映射</span></span><br><span class="line">  <span class="string">paths :</span> &#123;</span><br><span class="line">    <span class="string">'模块1'</span> : <span class="string">'modules/模块1'</span>,</span><br><span class="line">    <span class="string">'模块2'</span> : <span class="string">'modules/模块2'</span>,</span><br><span class="line">    <span class="string">'angular'</span> : <span class="string">'libs/angular'</span>,</span><br><span class="line">    <span class="string">'angular-messages'</span> : <span class="string">'libs/angular-messages'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//非AMD的模块</span></span><br><span class="line">  <span class="string">shim :</span> &#123;</span><br><span class="line">    <span class="string">'angular'</span> : &#123;</span><br><span class="line">        <span class="string">exports :</span> <span class="string">'angular'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'angular-messages'</span> : &#123;</span><br><span class="line">        <span class="string">exports :</span> <span class="string">'angular-messages'</span>,</span><br><span class="line">        <span class="string">deps :</span> [<span class="string">'angular'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-
-
 </li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-<ul>
+</ol>
+<p>​    </p>
+<ol start="3">
 <li><p><strong>CMD : 浏览器端</strong></p>
 <ul>
-<li><p>sea.js</p>
-</li>
-<li><p>基本语法</p>
-<ul>
-<li><p>定义暴露模块: </p>
-<figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line">define(function(<span class="keyword">require</span>, <span class="class"><span class="keyword">module</span>, <span class="title">exports</span>)&#123;</span></span><br><span class="line">  通过<span class="keyword">require</span>引入依赖模块</span><br><span class="line">  通过<span class="class"><span class="keyword">module</span>/<span class="title">exports</span>来暴露模块</span></span><br><span class="line">  exports.xxx = value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用模块seajs.use([‘模块1’, ‘模块2’])</p>
+<li>sea.js</li>
+<li>基本语法<ul>
+<li>定义暴露模块: <figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line">define(function(<span class="keyword">require</span>, <span class="class"><span class="keyword">module</span>, <span class="title">exports</span>)&#123;</span></span><br><span class="line">  通过<span class="keyword">require</span>引入依赖模块</span><br><span class="line">  通过<span class="class"><span class="keyword">module</span>/<span class="title">exports</span>来暴露模块</span></span><br><span class="line">  exports.xxx = value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
 </li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-<ul>
+</ol>
+<pre><code>* 使用模块seajs.use([&apos;模块1&apos;, &apos;模块2&apos;])</code></pre><p>​        </p>
+<ol start="4">
 <li><p><strong>ES6</strong></p>
 <ul>
 <li><p>ES6内置了模块化的实现</p>
 </li>
 <li><p>基本语法</p>
-<ul>
+</li>
 <li><p>定义暴露模块 : export</p>
 <ul>
 <li><p>暴露一个对象: </p>
@@ -280,17 +272,13 @@
 </li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
+</ol>
 <pre><code>  * 引入使用模块 : import
     * default模块:
       <figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> xxx  <span class="keyword">from</span> <span class="string">'模块路径/模块名'</span></span><br></pre></td></tr></table></figure>
 
     * 其它模块
       <figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;xxx, yyy&#125; <span class="keyword">from</span> <span class="string">'模块路径/模块名'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> module1 <span class="keyword">from</span> <span class="string">'模块路径/模块名'</span></span><br></pre></td></tr></table></figure>
-
-
 
 * 问题: 所有浏览器还不能直接识别ES6模块化的语法  
 
