@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.9.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  
+  
+  <title>  面试题知识贮备 |   余鹏的博客-前端-seo优化与实战经验分享博客 </title>
+
+  <meta name="Keywords" content="余鹏,博客,前端,实战经验分享">
+
+  <meta name="Description" content="Hello! I'm Yu Peng.建立这个博客来记录自己的前端技术学习成果、以及网站的SEO优化的认识、对技术的积累和知识的巩固、追求且学习新的知识，与大家分享交流。">
+
+  
+    <link rel="icon" href="/images/favicon.png">
+  
+
+
+  <link rel="stylesheet" href="/nayo.min.css"> 
+</head>  
+  <body>   
+    
+      <header class="header-wrapper">
+
+  <nav class="inner">
+    <div class="title">
+      <a href="/">
+        <img class="logo" src="/images/logo.png">
+      </a>
+    </div>
+
+    <ul class="menu">
+      
+      
+      <li class="item">
+        <a class="link" id="menu-home" href="/">
+          <i class="iconfont icon-home">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-archives" href="/archives">
+          <i class="iconfont icon-archives">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-tags" href="/tags">
+          <i class="iconfont icon-tags">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-about" href="/about">
+          <i class="iconfont icon-about">
+        </i></a>
+      </li>
+      
+      
+      
+      <li class="item">
+        <a class="link" id="menu-search">
+          <i class="iconfont icon-search">
+        </i></a>
+        
+
+        
+      
+    </li></ul>
+  </nav>
+</header>
+
+<header class="mobile-header-wrapper">
+  <i id="mobile-toggle" class="iconfont icon-menu mobile-toggle"></i>
+</header>   
+
+      <div class="container">       
+          
+          
+            <div class="container-inner">  
+          
+
+          <article class="post slideDownMin">
+  
+	
+<div class="header">
+		<p class="title">	
+			面试题知识贮备
+		</p>
+		<div class="info">	
+			<time>
+				9月 22, 2019
+			</time>
+
+			
+			
+				<i class="iconfont icon-words"></i>
+				<span class="words">4250
+				</span>
+			
+		</div>
+</div> 
+	
+
+    <script type="text/x-mathjax-config">
+        var post = document.getElementsByClassName("post")[0];  
+        MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",    
+            tex2jax: {
+                inlineMath:  [ ["$", "$"] , ["\\(","\\)"]],
+                displayMath: [ ["$$","$$"] , ["\\[","\\]"]],
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+            },
+            "HTML-CSS": {            
+                showMathMenu: false
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub,post]);
+    </script>
+    <style>.MathJax{outline:0;}</style>
+
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.2/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+ 
+
+	  <div class="typo post-content ">
+
+		
+
+			
+					<p>知识贮备，知识点考题</p>
+<a id="more"></a>
+
+
+
+<h2 id="面试知识贮备"><a href="#面试知识贮备" class="headerlink" title="面试知识贮备"></a>面试知识贮备</h2><ul>
+<li><strong>自我介绍：</strong></li>
+</ul>
+<ul>
+<li><strong>项目讲解：</strong></li>
+</ul>
+<h3 id="面试基础"><a href="#面试基础" class="headerlink" title="面试基础"></a>面试基础</h3><ul>
+<li>px与em、rem的区别</li>
+</ul>
+<p>  像素px是相对于显示器屏幕分辨率而言的。</p>
+<p>  em相对于当前对象内文本的字体尺寸，em会继承父级元素的字体大小。</p>
+<p>  rem是CSS3新增的一个相对单位（root em，根em）。<br>  使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。</p>
+<p>  <strong>px与rem的选择？</strong></p>
+<p>  对于只需要适配少部分手机设备，且分辨率对页面影响不大的，使用px即可 。</p>
+<p>  对于需要适配各种移动设备，使用rem，例如只需要适配iPhone和iPad等分辨率差别比较挺大的设备。</p>
+<ul>
+<li>流式布局，响应式布局，弹性布局的区别</li>
+</ul>
+<p>  流式布局：</p>
+<p>  流式布局，就是百分比布局，也称非固定像素布局。</p>
+<p>  通过盒子的宽度设置成百分比来根据屏幕的宽度来进行伸缩，不受固定像素的限制，内容向两侧填充。</p>
+<p>  流式布局方式是移动web开发使用的比较常见的布局方式。</p>
+<p>  响应式布局：</p>
+<p>  就是使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的。</p>
+<ul>
+<li><p>&lt;768的为超小屏幕（手机）——xs</p>
+</li>
+<li><p>≥768px小屏幕（平板）——sm</p>
+</li>
+<li><p>≥992px为中等屏幕（桌面显示器）——md</p>
+</li>
+<li><p>≥1200px为大屏幕（大桌面显示器）——lg</p>
+</li>
+</ul>
+<p>  弹性布局：</p>
+<p>  flex 是 flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性，任何一个容器都可以指定为 flex 布局。</p>
+<p>  <strong>总结：</strong>就是通过给父盒子添加flex属性，来控制子盒子的位置和排列方式。</p>
+<ul>
+<li><p>原型</p>
+<p>原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个” [[Prototype]]”内部属性，这个属性所对应的就是该对象的原型。</p>
+</li>
+</ul>
+<ul>
+<li><p>原型链</p>
+<p>因为每个对象和原型都有原型，对象的原型指向对象的父，而父的原型又指向父的父，这种原型层层连接起来的就构成了原型链。</p>
+</li>
+</ul>
+<ul>
+<li><p>闭包</p>
+<p>闭包是函数和声明该函数的词法环境的组合。</p>
+<p>闭包是指其所在执行上下文已经出栈，但仍访问了其所在执行上下文变量对象的函数。</p>
+<ul>
+<li>其所在执行上下文已经出栈</li>
+<li>访问了其所在执行上下文变量对象</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>继承</p>
+<p>ECMAScript只支持实现继承，而且其实现继承主要是依靠原型链来实现的。</p>
+<ul>
+<li><p>原型式继承</p>
+</li>
+<li><p>寄生式继承</p>
+</li>
+<li><p>寄生式组合式继承</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>跨域</p>
+<p>它是由浏览器的同源策略造成的，是浏览器对<a href="https://link.juejin.im?target=http%3A%2F%2Flib.csdn.net%2Fbase%2Fjavascript" target="_blank" rel="noopener">JavaScript</a>施加的安全限制。</p>
+<p>跨域的严格一点的定义是：只要协议，域名，端口有任何一个的不同，就被当作是跨域。</p>
+<p>所谓同源是指，域名，协议，端口均相同。</p>
+<p>这里说的js跨域是指通过js在不同的域之间进行数据传输或通信，比如用ajax向一个不同的域请求数据，或者通过js获取页面中不同域的框架中(iframe)的数据。</p>
+</li>
+</ul>
+<ul>
+<li><p>js作用域</p>
+<p>域，指的是一个空间、范围、区域，作用指的是在域内可进行读写操作。一个变量的作用域是程序源代码中定义的这个变量的区域。</p>
+</li>
+</ul>
+<ul>
+<li><p>js预解析</p>
+<p>在当前作用域中，JavaScript代码执行之前，浏览器首先会默认的把所有带var和function声明的变量进行提前的声明或者定义。</p>
+</li>
+</ul>
+<ul>
+<li><p>Bootstrap</p>
+<p>响应式</p>
+<p>移动设备优先</p>
+<p>适配不同屏幕大小</p>
+</li>
+</ul>
+<ul>
+<li><p>Bootstrap不同屏幕的栅格参数</p>
+<p>流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。</p>
+<ul>
+<li>&lt;768的为超小屏幕（手机）——xs</li>
+<li>≥768px小屏幕（平板）——sm</li>
+<li>≥992px为中等屏幕（桌面显示器）——md</li>
+<li>≥1200px为大屏幕（大桌面显示器）——lg</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>Ajax中get和post的区别</p>
+<p>get：</p>
+<ul>
+<li>get请求参数在url中传递</li>
+<li>需要注意编码问题</li>
+</ul>
+<p>post：</p>
+<ul>
+<li>post请求参数在请求体中传递</li>
+<li>需要设置请求头信息</li>
+</ul>
+<p>两者的区别：</p>
+<ul>
+<li><p>GET 用于获取信息，是无副作用的，是幂等的，且可缓存</p>
+</li>
+<li><p>POST 用于修改服务器上的数据，有副作用，非幂等，不可缓存</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>ES6</p>
+<p>ECMAScript6在保证向下兼容的前提下，提供大量新特性……</p>
+<ul>
+<li>块级作用域 关键字let, 常量const</li>
+<li>对象字面量的属性赋值简写（property value shorthand）</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>ES5与ES6的区别</p>
+<p>  ES2015特指在2015年发布的新一代JS语言标准，ES6泛指下一代JS语言标准，包含ES2015、ES2016、ES2017、ES2018等。现阶段在绝大部分场景下，ES2015默认等同ES6。ES5泛指上一代语言标准。ES2015可以理解为ES5和ES6的时间分界线。</p>
+</li>
+</ul>
+<ul>
+<li><p>媒体查询</p>
+<ul>
+<li><p>媒体指的就是各种设备 (移动设备, PC设备)</p>
+</li>
+<li><p>查询指的是要检测属于哪种设备</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>媒体查询: 通过查询当前属于哪种设备, 让网页能够在不同的设备下正常的预览</li>
+</ul>
+<ul>
+<li><p>less</p>
+<p>less是一种动态样式语言，属于css预处理器的范畴，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。</p>
+</li>
+</ul>
+<ul>
+<li>webpack<ul>
+<li>Webpack是一个模块打包器(bundler)</li>
+<li>在Webpack看来, 前端的所有资源文件(js/css/img/less/…)都会作为模块处理</li>
+<li>它将根据模块的依赖关系进行静态分析，生成对应的静态资源</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>git的常用命令</p>
+<table>
+<thead>
+<tr>
+<th><strong>常用命令</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git fetch</td>
+<td>拉取</td>
+</tr>
+<tr>
+<td>git pull</td>
+<td>拉取合并</td>
+</tr>
+<tr>
+<td>git push</td>
+<td>推送</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>当前状态</td>
+</tr>
+<tr>
+<td>git add</td>
+<td>添加修改文件</td>
+</tr>
+<tr>
+<td>git commit -m</td>
+<td>暂存</td>
+</tr>
+<tr>
+<td>git tag</td>
+<td>打tag</td>
+</tr>
+<tr>
+<td>git branch</td>
+<td>新建分支</td>
+</tr>
+<tr>
+<td>git checkout</td>
+<td>切换分支、回滚</td>
+</tr>
+<tr>
+<td>git remote</td>
+<td>操作远程库</td>
+</tr>
+<tr>
+<td>git config</td>
+<td>操作git配置文件</td>
+</tr>
+<tr>
+<td>git merge</td>
+<td>合并</td>
+</tr>
+</tbody></table>
+<p><strong>git fetch 与 git pull 的区别</strong></p>
+<p>一般认为， git pull 是 git fetch 和 git merge 的合并。</p>
+</li>
+</ul>
+<h3 id="面试核心"><a href="#面试核心" class="headerlink" title="面试核心"></a>面试核心</h3><ol>
+<li><p>Vue实现数据双向绑定的原理。</p>
+<p>vue数据双向绑定是通过数据劫持结合发布者-订阅者模式的方式来实现的。通过Object.defineProperty（）来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>Vue组件间的参数传递。</p>
+<p>父组件向子组件传值：子组件通过props方法接受数据</p>
+<p>子组件向父组件传值：$emit方法传递参数</p>
+<p>兄弟之间如何传值：兄弟组件传值eventBus</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>Vue几种常用的指令？Vue常用的修饰符有哪些？</p>
+<p>常用指令：v-for 、 v-if 、v-bind、v-on、v-show、v-else</p>
+<p>常用修饰符：.prevent: 提交事件不再重载页面；.stop: 阻止单击事件冒泡；.self: 当事件发生在该元素本身而不是子元素的时候会触发；.capture: 事件侦听，事件发生的时候会调用</p>
+</li>
+</ol>
+<ol start="4">
+<li><p>Vue-router有哪几种导航钩子？</p>
+<ol>
+<li><p>全局导航钩子</p>
+</li>
+<li><p>路由独享的钩子</p>
+</li>
+<li><p>组建内的导航钩子</p>
+</li>
+</ol>
+</li>
+</ol>
+<ol start="5">
+<li><p>Vuex的理解</p>
+<p>vuex 是专门为 vue 开发的数据状态管理模式。组件之间数据状态共享</p>
+<p>使用场景：音乐播放、登录状态、购物车</p>
+</li>
+</ol>
+<ol start="6">
+<li><p>Vue单页面应用及其优缺点。</p>
+<p>单页面应用（SPA），通俗一点说就是指只有一个主页面的应用，浏览器一开始要加载所有必须的 html, js, css。所有的页面内容都包含在这个所谓的主页面中。</p>
+</li>
+</ol>
+<p>   多页面（MPA），就是指一个应用中有多个页面，页面跳转时是整页刷新。</p>
+<p>   单页面的优点和缺点：</p>
+<p>   优点：</p>
+<p>   ​     1、用户体验好，快，内容的改变不需要重新加载整个页面，对服务器压力较小。</p>
+<p>   ​     2、前后端分离，比如vue项目</p>
+<p>   ​     3、完全的前端组件化，前端开发不再以页面为单位，更多地采用组件化的思想，代码结构和组织方式更加规范化，便于修改和调整</p>
+<p>   缺点：</p>
+<p>   ​    1、首次加载页面的时候需要加载大量的静态资源，这个加载时间相对比较长。</p>
+<p>   ​    2、不利于 SEO优化，单页页面，数据在前端渲染，就意味着没有 SEO。</p>
+<p>   ​    3、页面导航不可用，如果一定要导航需要自行实现前进、后退。（由于是单页面不能用浏览器的前进后退功能，所以需要自己建立堆栈管理）</p>
+<ol start="7">
+<li><p>谈谈Vue怎么做优化提高打开项目的时间，以及怎么减少打包后的项目体积。</p>
+<p>优化项目加载时间：</p>
+<ol>
+<li>代码优化</li>
+<li>利用vue-router进行页面懒加载</li>
+<li>服务器端渲染</li>
+<li>Vue异步组件</li>
+<li>减少不必要的插件</li>
+</ol>
+</li>
+</ol>
+<p>   减少项目打包体积：</p>
+<ol>
+<li>使用路由懒加载</li>
+<li>使用Gzip压缩文件</li>
+<li>抽离第三方包，改用cdn网络请求第三方包资源</li>
+<li>整合图片</li>
+<li>使用webpack-bundle-analyzer插件观察项目体积大小</li>
+<li>……</li>
+</ol>
+<ol start="8">
+<li><p>说几个常用的es6的新增方法，都有哪些好处？</p>
+<p>新增声明命令let和const</p>
+<p>模板字符串（Template String）</p>
+<p>函数的扩展</p>
+<p>箭头函数 </p>
+<p>…</p>
+</li>
+</ol>
+<ol start="9">
+<li><p>bindtap和catchtap的区别是什么？</p>
+<ul>
+<li>bindtap 会向下传递</li>
+<li>catchtap 不会向下传递，直接在当前标签拦截</li>
+</ul>
+</li>
+</ol>
+<ol start="10">
+<li><p>简述下wx.navigateTo()，wx.redirectTo()，wx.switchTab()，wx.navigateBack()，wx.reLaunch()的区别？</p>
+<ul>
+<li><p>wx.navigateTo()：保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面</p>
+</li>
+<li><p>wx.redirectTo()：关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面</p>
+</li>
+<li><p>wx.switchTab()：跳转到 abBar 页面，并关闭其他所有非 tabBar 页面</p>
+</li>
+<li><p>wx.navigateBack()关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages() 获取当前的页面栈，决定需要返回几层</p>
+</li>
+<li><p>wx.reLaunch()：关闭所有页面，打开到应用内的某个页面</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="11">
+<li><p>请谈谈原生开发小程序，wepy，mpvue的对比。</p>
+<ul>
+<li>个人认为，如果是新项目，且没有旧的 h5 项目迁移，则考虑用小程序原生开发，好处是相比于第三方框架，坑少。</li>
+<li>而如果有 老的 h5 项目是 vue 开发 或者 也有 h5 项目也需要小程序开发，则比较适合 wepy 或者 mpvue 来做迁移或者开发，近期看wepy几乎不更新了，所以推荐美团的mpvue。</li>
+<li>而如果如果团队前端强大，自己做一套框架也没问题。</li>
+</ul>
+</li>
+</ol>
+<p>后续补充…</p>
+  	
+					
+	  </div>     
+	  
+
+	<div class="bottom">
+  <div class="other">
+    <div class="meta">
+      
+
+      
+      <i class="iconfont icon-tag"></i>
+      <a class="tag-link" href="/tags/面试题/">面试题</a>
+      
+    </div>
+
+    <div class="operate">
+      
+      <span class="text">Share</span>
+      <ul class="share">
+	   			             
+        <li class="iconfont 
+		icon-share-qq 
+		-mob-share-qq 
+		item"></li>		
+   	   			             
+        <li class="iconfont 
+		icon-share-weixin 
+		-mob-share-weixin 
+		item"></li>		
+   	   			             
+        <li class="iconfont 
+		icon-share-weibo 
+		-mob-share-weibo 
+		item"></li>		
+   	   
+</ul>	
+
+<script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=21d601593a1de"></script>
+      
+    </div>
+  </div>
+
+
+  
+  <nav class="nav">
+    <div class="link">
+      
+      <a href="/2019/09/21/复习2/" class="link-wrap">
+        <strong class="caption">older</strong>
+        
+        <span class="title">
+          复习2
+        </span>
+      </a>
+      
+    </div>
+    <div class="link">
+      
+    </div>
+  </nav>
+  
+</div> 
+	
+<div class="comment">
+
+    
+
+    <div id="comment">
+    </div>
+
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+
+    <script src="//unpkg.com/valine@v1.1.8-beta/dist/Valine.min.js"></script>
+
+    <script>
+        new Valine({
+            el: '#comment',
+            notify: false,
+            verify: false,
+            app_id: 'cFM0eCo0CQ9xmBXmHi1eltol-gzGzoHsz',
+            app_key: 'oh9tizsnvV2vNvWgqEvoNtQO',
+            path: window.location.pathname,
+            avatar: 'mm',
+            guest_info: ['nick', 'mail']
+        });
+    </script>
+    
+</div>	
+</article>
+
+          </div> 
+      </div>            
+    
+        <i id="toTop" class="iconfont icon-backtotop"></i>
+
+  
+    <div class="none" id="search">
+    <div class="header">
+        <input type="text" placeholder="输入你想搜索的" id="search-input" class="input">
+        
+        <i id="search-cancel" class="iconfont icon-cancel"></i>
+    </div>
+
+    <div id="search-result" class="result"></div>
+</div>
+     <div class="mobile-menu">      
+
+      
+      <img class="mobile-menu-icon" src="/images/logo.png">  
+      
+
+         
+            
+
+            <a class="mobile-menu-link" href="/">首页
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/archives">归档
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/tags">标签
+            </a>
+            
+         
+            
+
+            <a class="mobile-menu-link" href="/about">关于
+            </a>
+            
+         
+                          
+
+            <a class="mobile-menu-link mobile-menu-search" href="#">搜索 </a>                 
+            
+         
+      
+</div>
+        
+    
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2d14233d5150db72b8cddabf0dab7d73"; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+<script>
+(function(i,s,o,g,r,a,m){
+	i['GoogleAnalyticsObject']=r;
+	i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-144218558-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+     
+    
+
+
+<footer class="footer">
+	<div class="inner">
+		<div class="copyright">
+			&copy;
+			
+			2019
+			Kevin
+		</div>
+	</div>
+</footer>   
+
+    <script src="/nayo.bundle.js"></script>           
+  </body>        
+</html>
